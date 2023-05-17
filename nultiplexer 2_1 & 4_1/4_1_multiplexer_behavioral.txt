@@ -1,0 +1,21 @@
+/****************************************
+4:1 MULTIPLEXER BEHAVIORAL
+****************************************/
+
+
+module mux_2_1_bh(Y,I,S);
+
+input [3:0}I; // 4 bit
+input [1:0]S; // 2 bit select
+output reg  Y; // hold until change
+
+always@(*)
+	 case(s)
+		   2'd0: Y=I[0];
+		   2'd1: Y=I[1];
+		   2'd2: Y=I[2];
+		   2'd2: Y=I[3];
+		   default:$display("error")
+	 endcase
+
+endmodule

@@ -1,0 +1,14 @@
+/****************************************
+4-bit Full ADDER DATAFLOW
+****************************************/
+
+
+module full_adder_4bit_df(s, cout, a, b, cin); // s&cout = output, a&b&cin = input
+input [3:0]a,b; // 4 bit
+input cin; // 1 bit
+output [3:0]s; // 4 bit
+output cout; // 1 bit
+
+assign {cout,s} = a + b +cin; // s = sum, cout = carry out
+
+endmodule

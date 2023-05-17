@@ -1,0 +1,18 @@
+/****************************************
+4:1 MULTIPLEXER DATAFLOW3
+****************************************/
+
+
+module mux_4_1_df(Y,I,S);
+input [3:0}I; // 4 bit
+input [1:0]S; // 2 bit select
+output  Y;
+
+/* chake if s=00 then pass i[0] alse 
+if s=01 the pass i[1] else
+ if s=10 then pass i[2] 
+else pass i[3]*/
+
+assign Y= (s==2'd0)?I[0]:((S==2'd1)?I[1]:((S==2'd2):I[3]));  
+
+endmodule

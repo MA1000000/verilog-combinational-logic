@@ -1,0 +1,14 @@
+/****************************************
+2:1 MULTIPLEXER DATAFLOW
+the easy way to designing mux with dataflow
+****************************************/
+
+
+module mux_2_1_df(Y,I,S);
+input [1:0}I; // 2 bit
+input S;
+output Y;
+
+assign Y = S?I[1]:I[0]; // if s=folse pthen pass I[1], else pass I[0] TO Y 
+
+endmodule

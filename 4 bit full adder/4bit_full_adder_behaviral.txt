@@ -1,0 +1,15 @@
+/****************************************
+4-bit Full ADDER BEHAVIRAL
+****************************************/
+
+
+module full_adder_4bit_bh(s, cout, a, b, cin); // s&cout = output, a&b&cin = input
+input [3:0]a,b; // 4 bit
+input cin; // 1 bit
+output reg [3:0]s; // 4 bit hold value until change
+output reg cout; // 1 bit hold value until change
+
+always@(a,b,cin)
+	 {cout,s} = a + b + cin;
+
+endmodule
